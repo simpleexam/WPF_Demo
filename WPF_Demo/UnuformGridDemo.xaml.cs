@@ -22,13 +22,22 @@ namespace WPF_Demo
         public UnuformGridDemo()
         {
             InitializeComponent();
+            //текущему окнов в свойство Name записывается имя для его дальнейшего поиска среди всех окон в текущем приложении
             this.Name = "temp";
         }
 
+        /// <summary>
+        /// клик по кнопке "открыть главное окно"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenMainWindowButton_Click(object sender, RoutedEventArgs e)
         {
+            //создание объекта окна
             MainWindow mainWindow = new MainWindow();
+            //отображение окна
             mainWindow.Show();
+            //сокрытие (не закрытие) текущего
             this.Hide();
         }
 
